@@ -1,2 +1,3 @@
 # Eco-vibes
-This is a page where you can read about latest environmental degradation problems. Help by doing your part for the environment!
+
+Eco-Vibes is an educational web platform dedicated to raising awareness about modern environmental issues. The goal of this project is to inform readers about the deep impact of human activities on our planet and inspire everyone to do their part in protecting nature.

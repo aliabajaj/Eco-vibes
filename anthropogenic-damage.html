@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthropogenic Factors & Environmental Damage - Eco Vibes</title>
+    <!-- Tailwind CSS for utility styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                            950: '#022c22'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reading Progress Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.03);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(5, 150, 105, 0.2);
+            border-radius: 99px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(5, 150, 105, 0.4);
+        }
+
+        /* Dropcap effect */
+        .dropcap::first-letter {
+            font-family: 'Playfair Display', serif;
+            float: left;
+            font-size: 4.5rem;
+            line-height: 0.85;
+            font-weight: 700;
+            margin-right: 0.85rem;
+            margin-top: 0.25rem;
+            color: #059669; /* Emerald Primary */
+        }
+
+        /* 3D Flashcard Flipping Engine */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        .flashcard-inner {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+        .flashcard-flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        .flashcard-front, .flashcard-back {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+        .flashcard-back {
+            transform: rotateY(180deg);
+        }
+
+        /* Typography sizing overrides */
+        .readable-normal p { font-size: 1.1rem; line-height: 1.85; }
+        .readable-large p { font-size: 1.25rem; line-height: 1.9; }
+        .readable-xlarge p { font-size: 1.4rem; line-height: 1.95; }
+
+        /* Beautiful Dynamic Mesh/Organic Gradients */
+        .theme-sage {
+            background: radial-gradient(circle at 10% 20%, rgba(220, 235, 224, 0.6) 0%, rgba(240, 244, 241, 0.9) 90.1%);
+        }
+        .theme-terracotta {
+            background: radial-gradient(circle at 10% 20%, rgba(253, 235, 219, 0.6) 0%, rgba(254, 246, 238, 0.9) 90.1%);
+        }
+        .theme-breeze {
+            background: radial-gradient(circle at 10% 20%, rgba(219, 234, 254, 0.6) 0%, rgba(240, 246, 255, 0.9) 90.1%);
+        }
+        .theme-forest {
+            background: radial-gradient(circle at 10% 20%, rgba(15, 23, 42, 1) 0%, rgba(4, 30, 22, 1) 90%);
+        }
+    </style>
+</head>
+<body id="body-root" class="theme-sage text-slate-800 font-sans transition-all duration-500 ease-in-out selection:bg-emerald-100 selection:text-emerald-900 min-h-screen">
+
+    <!-- Reading Progress Tracker -->
+    <div class="fixed top-0 left-0 w-full h-[5px] bg-emerald-50/50 z-50">
+        <div id="progressBar" class="h-full bg-emerald-600 w-0 transition-all duration-150 ease-out shadow-[0_2px_10px_rgba(5,150,105,0.4)]"></div>
+    </div>
+
+    <!-- Top Navigation Header -->
+    <header class="sticky top-0 z-40 w-full bg-white/80 backdrop-blur-md border-b border-slate-200/60 px-4 py-3 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <a href="articles.html" class="group flex items-center gap-2 text-slate-500 hover:text-emerald-600 font-semibold text-sm transition-colors">
+                    <svg class="w-4 h-4 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span class="hidden md:inline">Back to Repository</span>
+                </a>
+                <span class="text-slate-300 hidden md:inline">|</span>
+                <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest hidden md:inline-block">Special Interactive Feature</span>
+            </div>
+
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <span class="font-serif font-bold text-slate-900 text-lg">Eco<span class="text-emerald-600 italic font-medium">Vibes</span></span>
+            </div>
+
+            <!-- Top Actions -->
+            <div class="flex items-center gap-4">
+                <button onclick="copyCurrentURL()" class="relative group p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-all" title="Copy Article Link">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"/>
+                    </svg>
+                    <span id="copy-tooltip" class="absolute right-0 top-10 scale-0 group-focus:scale-100 bg-slate-800 text-white text-[10px] py-1 px-2 rounded whitespace-nowrap transition-all duration-200">Link Copied!</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Interactive Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- LEFT PANEL: Dynamic Control Panel & TOC -->
+            <aside class="lg:col-span-3 space-y-6 lg:sticky lg:top-24 order-2 lg:order-1">
+                
+                <!-- Editorial Card -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm transition-colors duration-500" id="aside-card-meta">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 tracking-wide uppercase mb-4">
+                        Climate Science
+                    </span>
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Published By</h4>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-emerald-850 flex items-center justify-center text-emerald-100 font-bold font-serif text-sm shadow-md">
+                            EV
+                        </div>
+                        <div>
+                            <p class="font-bold text-slate-800 text-sm m-0" id="author-label">Eco Vibes Editorial</p>
+                            <p class="text-xs text-slate-400 m-0">2026 Edition</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-slate-100 pt-4 space-y-2.5 text-xs text-slate-500 font-medium">
+                        <div class="flex items-center justify-between">
+                            <span>Reading Time:</span>
+                            <span class="text-slate-850 font-bold flex items-center gap-1" id="time-badge">
+                                <svg class="w-3.5 h-3.5 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                8 Min Read
+                            </span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Interactive Module:</span>
+                            <span class="text-emerald-600 font-bold">Concept Flashcards</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium Background / Theme Customizer -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm transition-colors duration-500" id="aside-card-theme">
+                    <h3 class="text-xs font-bold text-slate-800 uppercase tracking-widest mb-3 flex items-center gap-2" id="theme-card-title">
+                        <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M12 21a9 9 0 100-18 9 9 0 000 18z"/>
+                            <path d="M12 3v18M12 3a9 9 0 000 18"/>
+                        </svg>
+                        Artistic Backdrop Theme
+                    </h3>
+                    <p class="text-xs text-slate-500 mb-4" id="theme-desc">Select a custom ecosystem theme to dynamically paint the layout backdrop and adjust text contrast.</p>
+                    
+                    <div class="grid grid-cols-2 gap-2">
+                        <button onclick="changeBackdrop('sage')" class="group flex items-center gap-2 p-2 rounded-xl border-2 border-emerald-600 bg-emerald-50/50 hover:border-emerald-650 transition-all text-left w-full" id="btn-theme-sage">
+                            <span class="w-4 h-4 rounded-full bg-[#dcfce7] border border-emerald-300 block flex-shrink-0"></span>
+                            <span class="text-[11px] font-bold text-slate-850">Sage Mist</span>
+                        </button>
+                        <button onclick="changeBackdrop('terracotta')" class="group flex items-center gap-2 p-2 rounded-xl border-2 border-transparent bg-amber-50/50 hover:border-slate-300 transition-all text-left w-full" id="btn-theme-terracotta">
+                            <span class="w-4 h-4 rounded-full bg-[#fee2e2] border border-amber-200 block flex-shrink-0"></span>
+                            <span class="text-[11px] font-bold text-slate-850">Sunset Terra</span>
+                        </button>
+                        <button onclick="changeBackdrop('breeze')" class="group flex items-center gap-2 p-2 rounded-xl border-2 border-transparent bg-blue-50/50 hover:border-slate-300 transition-all text-left w-full" id="btn-theme-breeze">
+                            <span class="w-4 h-4 rounded-full bg-[#dbeafe] border border-blue-200 block flex-shrink-0"></span>
+                            <span class="text-[11px] font-bold text-slate-850">Blue Breeze</span>
+                        </button>
+                        <button onclick="changeBackdrop('forest')" class="group flex items-center gap-2 p-2 rounded-xl border-2 border-transparent bg-slate-900 text-slate-200 hover:border-emerald-800 transition-all text-left w-full" id="btn-theme-forest">
+                            <span class="w-4 h-4 rounded-full bg-[#022c22] border border-emerald-900 block flex-shrink-0"></span>
+                            <span class="text-[11px] font-bold text-slate-250">Deep Forest</span>
+                        </button>
+                    </div>
+
+                    <!-- Text Sizing Engine -->
+                    <div class="border-t border-slate-100 mt-5 pt-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest" id="size-label">Read Sizing</span>
+                            <div class="flex items-center gap-1">
+                                <button onclick="adjustTextSize('normal')" id="btn-size-normal" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 transition-all">A</button>
+                                <button onclick="adjustTextSize('large')" id="btn-size-large" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100 transition-all">A+</button>
+                                <button onclick="adjustTextSize('xlarge')" id="btn-size-xlarge" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100 transition-all">A++</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Table of Contents -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hidden lg:block transition-colors duration-500" id="aside-card-toc">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Table of Contents</h3>
+                    <nav class="space-y-3 text-sm">
+                        <a href="#intro" class="toc-link block text-emerald-700 font-semibold border-l-2 border-emerald-600 pl-3 transition-all hover:text-emerald-800">Anthropogenic Crisis</a>
+                        <a href="#industrial-revolution" class="toc-link block text-slate-500 font-medium border-l-2 border-transparent pl-3 transition-all hover:text-slate-900 hover:border-slate-350">The Industrial Revolution</a>
+                        <a href="#contributors" class="toc-link block text-slate-500 font-medium border-l-2 border-transparent pl-3 transition-all hover:text-slate-900 hover:border-slate-350">Invention Pioneers</a>
+                        <a href="#bhopal-disaster" class="toc-link block text-slate-500 font-medium border-l-2 border-transparent pl-3 transition-all hover:text-slate-900 hover:border-slate-350">Bhopal Gas Tragedy</a>
+                        <a href="#pesticides-impact" class="toc-link block text-slate-500 font-medium border-l-2 border-transparent pl-3 transition-all hover:text-slate-900 hover:border-slate-350">Impact of Pesticides</a>
+                        <a href="#overexploitation" class="toc-link block text-slate-500 font-medium border-l-2 border-transparent pl-3 transition-all hover:text-slate-900 hover:border-slate-350">Resource Degradation</a>
+                        <a href="#cruelty-to-animals" class="toc-link block text-slate-500 font-medium border-l-2 border-transparent pl-3 transition-all hover:text-slate-900 hover:border-slate-350">Cruelty to Animals</a>
+                        <a href="#study-center" class="toc-link block text-amber-600 font-semibold border-l-2 border-transparent pl-3 transition-all hover:text-amber-800">Study Companion</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- MAIN ARTICLE BODY -->
+            <main class="lg:col-span-9 order-1 lg:order-2 space-y-6">
+                <article class="bg-white rounded-3xl p-6 sm:p-10 lg:p-16 border border-slate-200/80 shadow-sm transition-colors duration-500" id="main-article-card">
+                    
+                    <div class="mb-8">
+                        <a href="articles.html" class="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-800 font-bold text-sm tracking-wide transition-all hover:-translate-x-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline points="12 19 5 12 12 5"></polyline>
+                            </svg>
+                            Back to Articles Repository
+                        </a>
+                    </div>
+
+                    <!-- Article Header -->
+                    <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-[1.15] tracking-tight mb-6" id="main-title">
+                        Anthropogenic factors are the leading cause of environmental damage
+                    </h1>
+
+                    <div class="flex flex-wrap items-center gap-x-6 gap-y-3 pb-8 mb-10 border-b border-slate-100 text-sm text-slate-500">
+                        <span class="inline-flex items-center gap-1.5 font-semibold text-slate-700 bg-slate-100 px-3 py-1 rounded-full text-xs" id="science-tag">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                            Climate Science
+                        </span>
+                        <div class="flex items-center gap-1.5" id="meta-year">
+                            <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <span>2026 Edition</span>
+                        </div>
+                        <div class="flex items-center gap-1.5" id="meta-read-time">
+                            <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>8 Min Read</span>
+                        </div>
+                    </div>
+
+                    <!-- Readable Text Container -->
+                    <div id="content-container" class="readable-normal text-slate-700 space-y-6">
+                        
+                        <!-- Introduction Section -->
+                        <span id="intro" class="block -mt-24 pt-24"></span>
+                        <p class="dropcap text-justify text-lg leading-relaxed">
+                            Greta Thunberg has often framed anthropogenic factors as a systemic crisis driven by unchecked economic growth and overconsumption. It can also be described as an environmental crisis driven by out-of-control economic growth and overindulgence of resources. The related concept of a human-dominated geological era, the "Anthropogene" (Anthropocene), was first introduced in 1922 by the Russian geologist and paleontologist Alexei Petrovich Pavlov. Anthropos, meaning human, and genic, coming from genesis, meaning origin or creation .
+                        </p>
+                        
+                        <p class="text-justify text-lg leading-relaxed">
+                            Nature is the epitome of beauty, calm and life, the mother to all. It can be described as the greatest source of wonderment, curiosity and joy and the only dominant source of things that make life worth living for and survival possible. As famously said by Mahatma Gandhi, an important figure in Indian history - “Earth (or nature) provides enough to satisfy every man's needs, but not every man's greed.”
+                        </p>
+                        
+                        <p class="text-justify text-lg leading-relaxed">
+                            As the economy grows, industries expand, humanity sees nothing but unwavering success whereas humanity is now bearing more and more responsibility for environmental damage and can also be known as the worst culprit of environmental degradation worldwide.
+                        </p>
+                        
+                        <p class="text-justify text-lg leading-relaxed">
+                            For ages man has been dazzled by material prosperity and has steadily improved technology, wealth and other such providers of physical and mental pleasures, but for a long time this exploitation was seemingly reasonable. A time when we used to hunt and gather, or a time when farming got popular and all those times in which material prosperity had not blinded the eyes of man with greed and the want for more. Greed is famously described as a strong, selfish desire to have more money, wealth, power, or possessions than you need.
+                        </p>
+                        
+                        <p class="text-justify text-lg leading-relaxed">
+                            It is now being slowly realized that man takes too much from nature and the exploitation is increasing day by day, and something must be done soon. In fact, "Humans are the only creatures on Earth that will cut down a tree, turn it into paper, then write 'save the trees' on it." Fyodor Dostoevsky once said that "Man, do not pride yourself on your superiority to the animals, for they are without sin, while you, with all your greatness, defile the earth wherever you appear..."
+                        </p>
+
+                        <!-- Industrial Revolution Section -->
+                        <div class="relative group mt-12 mb-6">
+                            <span id="industrial-revolution" class="block -mt-24 pt-24"></span>
+                            <div class="absolute -left-4 top-0 h-full w-1 bg-emerald-600 rounded-full scale-y-0 group-hover:scale-y-100 transition-transform origin-top duration-300"></div>
+                            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">The industrial revolution</h2>
+                        </div>
+                        <p class="text-justify text-lg leading-relaxed">
+                            The industrial revolution is an example of exploitation and here a major change occurred. In the 18th century mostly everything owned by the people was handcrafted, knitted or was made by themselves. The industrial revolution took place in Great Britain where people discovered the various uses of coal. After this new discovery, The Industrial Revolution completely changed what human beings could make by introducing machine-powered factories. Instead of spinning yarn by hand, textile industries mass-produced cheap cotton and wool clothing for millions of people. Heavy industries used new methods to melt iron and steel, which were used to build massive steam engines, trains, and railway tracks.
+                        </p>
+                        
+                        <p class="text-justify text-lg leading-relaxed">
+                            In the 19th and early twentieth century many cities of Europe and the US were covered with shrouds of smoke. In some places a very inky atmosphere developed in which automobile drivers were forced to switch on their headlights at midday. In some parts of the west people started fighting and protesting against the industries, but the protesting and the fighting soon declined as many people had already joined the race of industrialism and blindly embraced its consequences.
+                        </p>
+                        
+                        <p class="text-justify text-lg leading-relaxed">
+                            Consequently, the many activities of today and the past done by man have made the world highly polluted and have degraded the pure quality of the environment, focusing on material possession and joy. At this point, Aparigriha, a Jain teaching, seems significant as it proposes non-possession and non-greed along with detachment from all material prosperity.
+                        </p>
+
+                        <!-- Contributors Section -->
+                        <div class="relative group mt-12 mb-6">
+                            <span id="contributors" class="block -mt-24 pt-24"></span>
+                            <div class="absolute -left-4 top-0 h-full w-1 bg-emerald-600 rounded-full scale-y-0 group-hover:scale-y-100 transition-transform origin-top duration-300"></div>
+                            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">People who majorly contributed to the invention of industries:</h2>
+                        </div>
+
+                        <!-- Sub-categories with Elegant Design -->
+                        <div class="space-y-6">
+                            <div>
+                                <span class="inline-flex items-center gap-1.5 font-bold text-xs uppercase tracking-wider text-slate-900 bg-amber-100 px-3 py-1 rounded-md border-l-4 border-amber-500 my-2">
+                                    Textile
+                                </span>
+                                <ul class="space-y-3 pl-2">
+                                    <li class="flex items-start gap-3 text-slate-700">
+                                        <span class="flex-shrink-0 mt-1 w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600">
+                                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                                        </span>
+                                        <span><strong class="text-slate-900">James Hargreaves</strong> - invented the Spinning Jenny in 1764. It spun eight threads at once.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3 text-slate-700">
+                                        <span class="flex-shrink-0 mt-1 w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600">
+                                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                                        </span>
+                                        <span><strong class="text-slate-900">Richard Arkwright</strong> - invented the Water Frame in 1769. It made machines run on water power.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3 text-slate-700">
+                                        <span class="flex-shrink-0 mt-1 w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600">
+                                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                                        </span>
+                                        <span><strong class="text-slate-900">Edmund Cartwright</strong> - invented the Power Loom in 1785. It made weaving cloth much faster.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <span class="inline-flex items-center gap-1.5 font-bold text-xs uppercase tracking-wider text-slate-900 bg-amber-100 px-3 py-1 rounded-md border-l-4 border-amber-500 my-2">
+                                    Energy and power
+                                </span>
+                                <ul class="space-y-3 pl-2">
+                                    <li class="flex items-start gap-3 text-slate-700">
+                                        <span class="flex-shrink-0 mt-1 w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600">
+                                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                                        </span>
+                                        <span><strong class="text-slate-900">James Watt</strong> - improved the Steam Engine in 1776. His engine replaced muscle and wind power. It was used to run factory machines and trains.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <span class="inline-flex items-center gap-1.5 font-bold text-xs uppercase tracking-wider text-slate-900 bg-amber-100 px-3 py-1 rounded-md border-l-4 border-amber-500 my-2">
+                                    Transportation
+                                </span>
+                                <ul class="space-y-3 pl-2">
+                                    <li class="flex items-start gap-3 text-slate-700">
+                                        <span class="flex-shrink-0 mt-1 w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600">
+                                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                                        </span>
+                                        <span><strong class="text-slate-900">Richard Trevithick</strong> - built the first Steam Locomotive in 1804. It helped move goods across the country very fast.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <span class="inline-flex items-center gap-1.5 font-bold text-xs uppercase tracking-wider text-slate-900 bg-amber-100 px-3 py-1 rounded-md border-l-4 border-amber-500 my-2">
+                                    Communication
+                                </span>
+                                <ul class="space-y-3 pl-2">
+                                    <li class="flex items-start gap-3 text-slate-700">
+                                        <span class="flex-shrink-0 mt-1 w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600">
+                                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                                        </span>
+                                        <span><strong class="text-slate-900">Alexander Graham Bell</strong> - invented the Telephone in 1876.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Bhopal Disaster Section -->
+                        <div class="relative group mt-12 mb-6">
+                            <span id="bhopal-disaster" class="block -mt-24 pt-24"></span>
+                            <div class="absolute -left-4 top-0 h-full w-1 bg-emerald-600 rounded-full scale-y-0 group-hover:scale-y-100 transition-transform origin-top duration-300"></div>
+                            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">The Bhopal Industrial disaster</h2>
+                        </div>
+                        <p class="text-justify text-lg leading-relaxed">
+                            Another suitable example is the Bhopal industrial disaster which took place in Bhopal, India. The Bhopal gas tragedy occurred on the night of December 2 - 3, 1984. In the tragedy at a pesticide plant owned by Union Carbide India Limited, water inadvertently entered a storage tank holding MIC (Methyl Isocyanate) during routine pipe maintenance. That caused the leakage of MIC, a very dangerous gas. The deadly gas silently stole through the air until the sleeping people woke up coughing with smoke in their eyes and throat or died. Now, that’s the human toll of the incident. Due to this tragedy, groundwater, soil and air were grossly contaminated for a long period of time. This leads to loss of biodiversity in that area and loss of plants. The catastrophe acted as a catalyst for environmental law in India. It prompted the passage of the Environment Protection Act, 1986, which established stricter regulatory frameworks for hazardous industries.
+                        </p>
+                        
+                        <p class="text-justify text-lg leading-relaxed">
+                            Today when people talk about this disaster they think of how many people died , what those people suffered and about the consequences they had to face but hardly anyone thinks about how much the environment was harmed and the consequences it had to face.
+                        </p>
+
+                        <!-- Pesticides Impact Section -->
+                        <div class="relative group mt-12 mb-6">
+                            <span id="pesticides-impact" class="block -mt-24 pt-24"></span>
+                            <div class="absolute -left-4 top-0 h-full w-1 bg-emerald-600 rounded-full scale-y-0 group-hover:scale-y-100 transition-transform origin-top duration-300"></div>
+                            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">The impact of pesticides on the environment</h2>
+                        </div>
+                        <p class="text-justify text-lg leading-relaxed">
+                            A pesticide is any substance or mixture of substances used to prevent, destroy, repel, or control harmful pests. This is commonly used in farming to protect the crops, but have you ever wondered about its negative consequences? Pesticides used in agriculture can differ based on soil types, etc. It is composed of many ingredients which can be categorized into active ingredients and inert ingredients. The active ingredients basically just kill the pests whereas the inert ingredients are used to make the active ingredient help the product to work safely.
+                        </p>
+
+                        <!-- Overexploitation of Resources Section -->
+                        <div class="relative group mt-12 mb-6">
+                            <span id="overexploitation" class="block -mt-24 pt-24"></span>
+                            <div class="absolute -left-4 top-0 h-full w-1 bg-emerald-600 rounded-full scale-y-0 group-hover:scale-y-100 transition-transform origin-top duration-300"></div>
+                            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">Overexploitation of natural resources</h2>
+                        </div>
+                        <p class="text-justify text-lg leading-relaxed">
+                            To begin we have to understand what natural resources are ? Natural resources are raw materials that are sources of energy for us and are obtained from the environment itself. Some examples can be petrol, rocks, sand, wind etc.. .These resources can be categorized into three sections -
+                        </p>
+                        
+                        <!-- Interlinked Resource Layout Cards -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+                            <div class="bg-slate-50 border border-slate-100 hover:border-emerald-200 p-5 rounded-2xl transition-all shadow-[0_4px_12px_rgba(0,0,0,0.01)] hover:shadow-md" id="card-resource-1">
+                                <span class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs mb-3">01</span>
+                                <h4 class="font-bold text-slate-900 text-sm mb-2">Perpetually Renewable</h4>
+                                <p class="text-xs text-slate-650 text-left leading-relaxed">Continuous natural energy sources that will last forever or are easily renewable. Examples include solar, wind, geothermal energy and tides/waves.</p>
+                            </div>
+                            <div class="bg-slate-50 border border-slate-100 hover:border-emerald-200 p-5 rounded-2xl transition-all shadow-[0_4px_12px_rgba(0,0,0,0.01)] hover:shadow-md" id="card-resource-2">
+                                <span class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs mb-3">02</span>
+                                <h4 class="font-bold text-slate-900 text-sm mb-2">Intermediate Renewable</h4>
+                                <p class="text-xs text-slate-650 text-left leading-relaxed">Temporary sources that remain renewable only if we do not overexploit and finish them quickly. Examples: freshwater, soil, crops.</p>
+                            </div>
+                            <div class="bg-slate-50 border border-slate-100 hover:border-emerald-200 p-5 rounded-2xl transition-all shadow-[0_4px_12px_rgba(0,0,0,0.01)] hover:shadow-md" id="card-resource-3">
+                                <span class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs mb-3">03</span>
+                                <h4 class="font-bold text-slate-900 text-sm mb-2">Non-Renewable</h4>
+                                <p class="text-xs text-slate-650 text-left leading-relaxed">Limited resources that cannot replenish in a suitable timeframe; mindful consumption is key. Examples: fossil fuels, metals, lithium.</p>
+                            </div>
+                        </div>
+
+                        <p class="text-justify text-lg leading-relaxed">
+                            It is being slowly realized that humans are exploiting these resources. The continuous over use of non renewable resources or intermediate renewable resources can strip us of these resources. Over use of these resources also harm the environment in several ways as well as strip other beings of access to these resources. Humans are deeply dependent on such resources but we must change that dependency to something more reliable and something which profits every being on this planet.
+                        </p>
+                        
+                        <p class="text-justify text-lg leading-relaxed">
+                            Mining for resources like coal and fossil fuels are harmful for the soil of the particular area and can cause loss of biodiversity as discussed before in this chapter.
+                        </p>
+                        
+                        <p class="text-justify text-lg leading-relaxed">
+                            The solution to this crisis is pretty simple. It is something we hear in our daily life but still refuse to adopt the method.
+                        </p>
+                        
+                        <p class="text-justify text-lg leading-relaxed">
+                            The first method is reduce,reuse and recycle. We can focus on reducing the usage of such resources by not wasting them and economizing them. Along with that we can reuse certain resources to diminish the demand of that particular resource in the society. Lastly, we can recycle these resources. This is the best option as this way we can use a certain amount of resources many times before finally discarding it. Agreed that recycling does have some bad effects like increasing microplastic but this is the least we can do to make our methods sustainable.
+                        </p>
+
+                        <!-- Cruelty to Animals Section -->
+                        <div class="relative group mt-12 mb-6">
+                            <span id="cruelty-to-animals" class="block -mt-24 pt-24"></span>
+                            <div class="absolute -left-4 top-0 h-full w-1 bg-emerald-600 rounded-full scale-y-0 group-hover:scale-y-100 transition-transform origin-top duration-300"></div>
+                            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">Cruelty to animals</h2>
+                        </div>
+                        <p class="text-justify text-lg leading-relaxed">
+                            Today when we mention cruelty to animals everybody relates it to poaching or hunting or animal abuse. They are not wrong but there is also another perspective to this term. Cruelty to animals is also mining, cutting down trees, over exploitation of resources and etc.. .When we do this, we just don’t harm the environment but we strip these animals of their homes and resources and that is real cruelty to animals. We are forgetting something we learn in kindergarten - to share and care. This world and environment is built to care for and to share not for personal gain. The environment is real - it feels everything. For many decades we have been forcing these animals to change their way of living.
+                        </p>
+                        
+                        <p class="text-justify text-lg leading-relaxed">
+                            A very suitable example is how we build train tracks in the middle of the forest. A railway line (India) split a forest in two parts due to which a species of apes called the hoolock gibbons which barely set foot on the ground were separated. They were separated from their family and other parts of the jungle until conservationists built an artificial canopy above the railway track. Now that is cruelty to animals. Separating them from their loved ones.
+                        </p>
+                        
+                        <p class="text-justify text-lg leading-relaxed">
+                            One measure taken to reduce animal cruelty is the prevention of animal cruelty act. The Prevention of Cruelty to Animals (PCA) Act, 1960 is India's foundational law protecting animals from unnecessary pain and suffering. It applies to all living creatures (other than humans) and establishes strict guidelines for animal ownership, labor, transportation, and scientific experiments. This law can only stop animal abuse whereas not other forms of cruelty to animals. Now that is up to us, not to the law or anyone but to us. From street animals to wild animals to pets and to factory farmed animals to insects. The protection of these animals is in our hands and not in any others. Our behaviour towards animals is currently justified as unprincipled and very ruthless and we must do something to change that.
+                        </p>
+
+                        <!-- Editorial Quote Section -->
+                        <blockquote class="my-12 relative bg-emerald-50/50 rounded-2xl border-l-4 border-emerald-600 p-8 md:p-10 transition-all duration-500" id="editorial-quote">
+                            <span class="absolute top-2 left-3 text-7xl font-serif text-emerald-200/50 select-none">“</span>
+                            <p class="font-serif text-xl sm:text-2xl italic text-emerald-900 leading-relaxed relative z-10 m-0">
+                                The greatest threat to our environment is thinking that someone else will save it. Therefore we must all work together to save the environment and make amends for our actions.
+                            </p>
+                        </blockquote>
+
+                    </div>
+
+                    <!-- Footer Info Panel -->
+                    <footer class="mt-16 pt-8 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400 text-xs">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                            <span class="font-serif font-bold text-slate-900 text-sm" id="footer-logo">Eco<span class="text-emerald-600 italic">Vibes</span></span>
+                        </div>
+                        <p class="m-0">&copy; 2026 Eco Vibes. All rights reserved.</p>
+                    </footer>
+
+                </article>
+
+                <!-- STUDY COMPANION FLASHCARDS PORTAL -->
+                <div id="study-center" class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-md transition-colors duration-500 scroll-mt-20">
+                    
+                    <!-- Widget Header -->
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+                        <div>
+                            <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest block mb-1">Knowledge Reinforcement</span>
+                            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 m-0" id="flash-title">Concept Study Center</h2>
+                            <p class="text-sm text-slate-500 m-0 mt-1">Review the crucial details from this article with interactive 3D study cards.</p>
+                        </div>
+                        
+                        <!-- Progress Wheel -->
+                        <div class="flex items-center gap-3 bg-emerald-50 border border-emerald-100 p-3 rounded-2xl">
+                            <div class="relative w-12 h-12 flex items-center justify-center">
+                                <svg class="w-full h-full transform -rotate-90">
+                                    <circle cx="24" cy="24" r="20" stroke="rgba(16, 185, 129, 0.15)" stroke-width="4" fill="transparent" />
+                                    <circle id="progress-circle" cx="24" cy="24" r="20" stroke="#10b981" stroke-width="4" fill="transparent" stroke-dasharray="125.6" stroke-dashoffset="125.6" class="transition-all duration-500" />
+                                </svg>
+                                <span id="progress-percentage" class="absolute font-bold text-xs text-emerald-800">0%</span>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-emerald-950 m-0">Mastery Progress</p>
+                                <p class="text-[10px] text-emerald-700 m-0"><span id="mastered-count">0</span> of <span id="total-count">8</span> cards completed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Filter and Controls -->
+                    <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-slate-150">
+                        <div class="flex flex-wrap gap-1.5">
+                            <button onclick="filterFlashcards('all')" id="btn-filter-all" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-emerald-600 text-white transition-all">
+                                All Cards (8)
+                            </button>
+                            <button onclick="filterFlashcards('learning')" id="btn-filter-learning" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
+                                To Learn
+                            </button>
+                            <button onclick="filterFlashcards('mastered')" id="btn-filter-mastered" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
+                                Mastered
+                            </button>
+                        </div>
+                        <button onclick="resetAllFlashcards()" class="text-xs font-bold text-slate-450 hover:text-rose-600 transition-colors flex items-center gap-1">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 15.19M9 9H4v5"/>
+                            </svg>
+                            Reset Study Progress
+                        </button>
+                    </div>
+
+                    <!-- Flashcard Deck Area (Responsive Grid) -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="flashcards-grid">
+                        
+                        <!-- CARD 1 -->
+                        <div class="perspective-1000 group relative h-64 w-full flashcard-element" data-card-id="1" data-status="learning">
+                            <div class="flashcard-inner relative w-full h-full duration-500 cursor-pointer">
+                                <!-- Front -->
+                                <div onclick="toggleCard(this)" class="flashcard-front absolute inset-0 bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start">
+                                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 uppercase tracking-wider">Scientific Origins</span>
+                                        <span class="text-xs text-slate-400 font-medium">Card 1 / 8</span>
+                                    </div>
+                                    <h3 class="font-serif text-lg font-bold text-slate-900 text-center px-4">What is the origin and literal meaning of the word "Anthropogenic"?</h3>
+                                    <div class="text-center text-xs text-slate-400 font-semibold uppercase tracking-widest flex items-center justify-center gap-1">
+                                        Click to Flip
+                                        <svg class="w-3.5 h-3.5 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+                                    </div>
+                                </div>
+                                <!-- Back -->
+                                <div class="flashcard-back absolute inset-0 bg-emerald-900 border border-emerald-950 rounded-2xl p-6 flex flex-col justify-between shadow-md">
+                                    <div class="flex justify-between items-start text-emerald-300 text-[10px] font-bold uppercase tracking-wider">
+                                        <span>Science Answer</span>
+                                        <span class="text-emerald-400">Card 1 / 8</span>
+                                    </div>
+                                    <div class="text-emerald-50 text-sm text-center leading-relaxed font-medium px-2" onclick="toggleCard(this)">
+                                        First introduced by Russian geologist <strong class="text-amber-300">Alexei Petrovich Pavlov</strong> in 1922. It originates from <strong class="text-amber-300">"Anthropos"</strong> (human) and <strong class="text-amber-300">"genic"</strong> (origin/creation).
+                                    </div>
+                                    <div class="flex justify-between items-center pt-2 border-t border-emerald-800">
+                                        <span class="text-[10px] text-emerald-400">Tap center to flip again</span>
+                                        <button onclick="markMastered(event, '1')" class="px-3 py-1 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs transition-colors flex items-center gap-1 shadow-sm">
+                                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                                            Mark Mastered
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 2 -->
+                        <div class="perspective-1000 group relative h-64 w-full flashcard-element" data-card-id="2" data-status="learning">
+                            <div class="flashcard-inner relative w-full h-full duration-500 cursor-pointer">
+                                <!-- Front -->
+                                <div onclick="toggleCard(this)" class="flashcard-front absolute inset-0 bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start">
+                                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-850 uppercase tracking-wider">Philosophical Wisdom</span>
+                                        <span class="text-xs text-slate-400 font-medium">Card 2 / 8</span>
+                                    </div>
+                                    <h3 class="font-serif text-lg font-bold text-slate-900 text-center px-4">What was Mahatma Gandhi's famous principle on human greed?</h3>
+                                    <div class="text-center text-xs text-slate-400 font-semibold uppercase tracking-widest flex items-center justify-center gap-1">
+                                        Click to Flip
+                                        <svg class="w-3.5 h-3.5 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+                                    </div>
+                                </div>
+                                <!-- Back -->
+                                <div class="flashcard-back absolute inset-0 bg-emerald-900 border border-emerald-950 rounded-2xl p-6 flex flex-col justify-between shadow-md">
+                                    <div class="flex justify-between items-start text-emerald-300 text-[10px] font-bold uppercase tracking-wider">
+                                        <span>Philosophy Answer</span>
+                                        <span class="text-emerald-400">Card 2 / 8</span>
+                                    </div>
+                                    <div class="text-emerald-50 text-sm text-center italic leading-relaxed px-2 font-serif" onclick="toggleCard(this)">
+                                        "Earth (or nature) provides enough to satisfy <span class="text-amber-300 font-bold">every man's needs</span>, but not <span class="text-amber-300 font-bold">every man's greed</span>."
+                                    </div>
+                                    <div class="flex justify-between items-center pt-2 border-t border-emerald-800">
+                                        <span class="text-[10px] text-emerald-400">Tap center to flip again</span>
+                                        <button onclick="markMastered(event, '2')" class="px-3 py-1 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs transition-colors flex items-center gap-1 shadow-sm">
+                                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                                            Mark Mastered
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 3 -->
+                        <div class="perspective-1000 group relative h-64 w-full flashcard-element" data-card-id="3" data-status="learning">
+                            <div class="flashcard-inner relative w-full h-full duration-500 cursor-pointer">
+                                <!-- Front -->
+                                <div onclick="toggleCard(this)" class="flashcard-front absolute inset-0 bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start">
+                                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-teal-100 text-teal-850 uppercase tracking-wider">Jain Philosophy</span>
+                                        <span class="text-xs text-slate-400 font-medium">Card 3 / 8</span>
+                                    </div>
+                                    <h3 class="font-serif text-lg font-bold text-slate-900 text-center px-4">What is the concept of "Aparigriha" discussed in the text?</h3>
+                                    <div class="text-center text-xs text-slate-400 font-semibold uppercase tracking-widest flex items-center justify-center gap-1">
+                                        Click to Flip
+                                        <svg class="w-3.5 h-3.5 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+                                    </div>
+                                </div>
+                                <!-- Back -->
+                                <div class="flashcard-back absolute inset-0 bg-emerald-900 border border-emerald-950 rounded-2xl p-6 flex flex-col justify-between shadow-md">
+                                    <div class="flex justify-between items-start text-emerald-300 text-[10px] font-bold uppercase tracking-wider">
+                                        <span>Philosophy Answer</span>
+                                        <span class="text-emerald-400">Card 3 / 8</span>
+                                    </div>
+                                    <div class="text-emerald-50 text-sm text-center leading-relaxed font-medium px-2" onclick="toggleCard(this)">
+                                        A Jain moral teaching that proposes <strong class="text-amber-300">non-possession, non-greed,</strong> and detachment from excessive material wealth and prosperity.
+                                    </div>
+                                    <div class="flex justify-between items-center pt-2 border-t border-emerald-800">
+                                        <span class="text-[10px] text-emerald-400">Tap center to flip again</span>
+                                        <button onclick="markMastered(event, '3')" class="px-3 py-1 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs transition-colors flex items-center gap-1 shadow-sm">
+                                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                                            Mark Mastered
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 4 -->
+                        <div class="perspective-1000 group relative h-64 w-full flashcard-element" data-card-id="4" data-status="learning">
+                            <div class="flashcard-inner relative w-full h-full duration-500 cursor-pointer">
+                                <!-- Front -->
+                                <div onclick="toggleCard(this)" class="flashcard-front absolute inset-0 bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start">
+                                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-indigo-100 text-indigo-850 uppercase tracking-wider">Industrial History</span>
+                                        <span class="text-xs text-slate-400 font-medium">Card 4 / 8</span>
+                                    </div>
+                                    <h3 class="font-serif text-lg font-bold text-slate-900 text-center px-4">Who invented the "Spinning Jenny" in 1764 and what was its output?</h3>
+                                    <div class="text-center text-xs text-slate-400 font-semibold uppercase tracking-widest flex items-center justify-center gap-1">
+                                        Click to Flip
+                                        <svg class="w-3.5 h-3.5 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+                                    </div>
+                                </div>
+                                <!-- Back -->
+                                <div class="flashcard-back absolute inset-0 bg-emerald-900 border border-emerald-950 rounded-2xl p-6 flex flex-col justify-between shadow-md">
+                                    <div class="flex justify-between items-start text-emerald-300 text-[10px] font-bold uppercase tracking-wider">
+                                        <span>History Answer</span>
+                                        <span class="text-emerald-400">Card 4 / 8</span>
+                                    </div>
+                                    <div class="text-emerald-50 text-sm text-center leading-relaxed font-medium px-2" onclick="toggleCard(this)">
+                                        Invented by <strong class="text-amber-300">James Hargreaves</strong>. It drastically improved spinning output by weaving/spinning <strong class="text-amber-300">eight threads at once</strong>.
+                                    </div>
+                                    <div class="flex justify-between items-center pt-2 border-t border-emerald-800">
+                                        <span class="text-[10px] text-emerald-400">Tap center to flip again</span>
+                                        <button onclick="markMastered(event, '4')" class="px-3 py-1 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs transition-colors flex items-center gap-1 shadow-sm">
+                                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                                            Mark Mastered
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 5 -->
+                        <div class="perspective-1000 group relative h-64 w-full flashcard-element" data-card-id="5" data-status="learning">
+                            <div class="flashcard-inner relative w-full h-full duration-500 cursor-pointer">
+                                <!-- Front -->
+                                <div onclick="toggleCard(this)" class="flashcard-front absolute inset-0 bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start">
+                                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-100 text-rose-850 uppercase tracking-wider">Industrial Disasters</span>
+                                        <span class="text-xs text-slate-400 font-medium">Card 5 / 8</span>
+                                    </div>
+                                    <h3 class="font-serif text-lg font-bold text-slate-900 text-center px-4">What chemical compounds and reaction caused the Bhopal gas tragedy?</h3>
+                                    <div class="text-center text-xs text-slate-400 font-semibold uppercase tracking-widest flex items-center justify-center gap-1">
+                                        Click to Flip
+                                        <svg class="w-3.5 h-3.5 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+                                    </div>
+                                </div>
+                                <!-- Back -->
+                                <div class="flashcard-back absolute inset-0 bg-emerald-900 border border-emerald-950 rounded-2xl p-6 flex flex-col justify-between shadow-md">
+                                    <div class="flex justify-between items-start text-emerald-300 text-[10px] font-bold uppercase tracking-wider">
+                                        <span>Disaster Answer</span>
+                                        <span class="text-emerald-400">Card 5 / 8</span>
+                                    </div>
+                                    <div class="text-emerald-50 text-sm text-center leading-relaxed font-medium px-2" onclick="toggleCard(this)">
+                                        Water inadvertently entered a storage tank containing <strong class="text-amber-300">MIC (Methyl Isocyanate)</strong> at a pesticide plant, inducing a catastrophic toxic gas leak.
+                                    </div>
+                                    <div class="flex justify-between items-center pt-2 border-t border-emerald-800">
+                                        <span class="text-[10px] text-emerald-400">Tap center to flip again</span>
+                                        <button onclick="markMastered(event, '5')" class="px-3 py-1 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs transition-colors flex items-center gap-1 shadow-sm">
+                                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                                            Mark Mastered
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 6 -->
+                        <div class="perspective-1000 group relative h-64 w-full flashcard-element" data-card-id="6" data-status="learning">
+                            <div class="flashcard-inner relative w-full h-full duration-500 cursor-pointer">
+                                <!-- Front -->
+                                <div onclick="toggleCard(this)" class="flashcard-front absolute inset-0 bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start">
+                                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-850 uppercase tracking-wider">Agrochemicals</span>
+                                        <span class="text-xs text-slate-400 font-medium">Card 6 / 8</span>
+                                    </div>
+                                    <h3 class="font-serif text-lg font-bold text-slate-900 text-center px-4">What are active vs. inert ingredients inside common pesticides?</h3>
+                                    <div class="text-center text-xs text-slate-400 font-semibold uppercase tracking-widest flex items-center justify-center gap-1">
+                                        Click to Flip
+                                        <svg class="w-3.5 h-3.5 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+                                    </div>
+                                </div>
+                                <!-- Back -->
+                                <div class="flashcard-back absolute inset-0 bg-emerald-900 border border-emerald-950 rounded-2xl p-6 flex flex-col justify-between shadow-md">
+                                    <div class="flex justify-between items-start text-emerald-300 text-[10px] font-bold uppercase tracking-wider">
+                                        <span>Science Answer</span>
+                                        <span class="text-emerald-400">Card 6 / 8</span>
+                                    </div>
+                                    <div class="text-emerald-50 text-sm text-center leading-relaxed font-medium px-2" onclick="toggleCard(this)">
+                                        <strong class="text-amber-300">Active ingredients</strong> destroy or prevent target crop pests. <strong class="text-amber-300">Inert ingredients</strong> are added to assist the compound to work safely/effectively.
+                                    </div>
+                                    <div class="flex justify-between items-center pt-2 border-t border-emerald-800">
+                                        <span class="text-[10px] text-emerald-400">Tap center to flip again</span>
+                                        <button onclick="markMastered(event, '6')" class="px-3 py-1 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs transition-colors flex items-center gap-1 shadow-sm">
+                                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                                            Mark Mastered
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 7 -->
+                        <div class="perspective-1000 group relative h-64 w-full flashcard-element" data-card-id="7" data-status="learning">
+                            <div class="flashcard-inner relative w-full h-full duration-500 cursor-pointer">
+                                <!-- Front -->
+                                <div onclick="toggleCard(this)" class="flashcard-front absolute inset-0 bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start">
+                                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-teal-100 text-teal-850 uppercase tracking-wider">Natural Resources</span>
+                                        <span class="text-xs text-slate-400 font-medium">Card 7 / 8</span>
+                                    </div>
+                                    <h3 class="font-serif text-lg font-bold text-slate-900 text-center px-4">What are intermediate renewable resources? Provide examples.</h3>
+                                    <div class="text-center text-xs text-slate-400 font-semibold uppercase tracking-widest flex items-center justify-center gap-1">
+                                        Click to Flip
+                                        <svg class="w-3.5 h-3.5 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+                                    </div>
+                                </div>
+                                <!-- Back -->
+                                <div class="flashcard-back absolute inset-0 bg-emerald-900 border border-emerald-950 rounded-2xl p-6 flex flex-col justify-between shadow-md">
+                                    <div class="flex justify-between items-start text-emerald-300 text-[10px] font-bold uppercase tracking-wider">
+                                        <span>Resources Answer</span>
+                                        <span class="text-emerald-400">Card 7 / 8</span>
+                                    </div>
+                                    <div class="text-emerald-50 text-sm text-center leading-relaxed font-medium px-2" onclick="toggleCard(this)">
+                                        Temporary resources that remain renewable <strong class="text-amber-300">only if we don't overexploit them</strong>. Examples: <strong class="text-amber-300">freshwater, arable soil, and crops</strong>.
+                                    </div>
+                                    <div class="flex justify-between items-center pt-2 border-t border-emerald-800">
+                                        <span class="text-[10px] text-emerald-400">Tap center to flip again</span>
+                                        <button onclick="markMastered(event, '7')" class="px-3 py-1 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs transition-colors flex items-center gap-1 shadow-sm">
+                                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                                            Mark Mastered
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CARD 8 -->
+                        <div class="perspective-1000 group relative h-64 w-full flashcard-element" data-card-id="8" data-status="learning">
+                            <div class="flashcard-inner relative w-full h-full duration-500 cursor-pointer">
+                                <!-- Front -->
+                                <div onclick="toggleCard(this)" class="flashcard-front absolute inset-0 bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+                                    <div class="flex justify-between items-start">
+                                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-purple-100 text-purple-850 uppercase tracking-wider">Environmental Law</span>
+                                        <span class="text-xs text-slate-400 font-medium">Card 8 / 8</span>
+                                    </div>
+                                    <h3 class="font-serif text-lg font-bold text-slate-900 text-center px-4">What is the Prevention of Cruelty to Animals (PCA) Act, 1960?</h3>
+                                    <div class="text-center text-xs text-slate-400 font-semibold uppercase tracking-widest flex items-center justify-center gap-1">
+                                        Click to Flip
+                                        <svg class="w-3.5 h-3.5 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+                                    </div>
+                                </div>
+                                <!-- Back -->
+                                <div class="flashcard-back absolute inset-0 bg-emerald-900 border border-emerald-950 rounded-2xl p-6 flex flex-col justify-between shadow-md">
+                                    <div class="flex justify-between items-start text-emerald-300 text-[10px] font-bold uppercase tracking-wider">
+                                        <span>Law Answer</span>
+                                        <span class="text-emerald-400">Card 8 / 8</span>
+                                    </div>
+                                    <div class="text-emerald-50 text-sm text-center leading-relaxed font-medium px-2" onclick="toggleCard(this)">
+                                        India's foundational law safeguarding animals from unnecessary pain. It regulates ownership, physical labor, transit, and clinical testing.
+                                    </div>
+                                    <div class="flex justify-between items-center pt-2 border-t border-emerald-800">
+                                        <span class="text-[10px] text-emerald-400">Tap center to flip again</span>
+                                        <button onclick="markMastered(event, '8')" class="px-3 py-1 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs transition-colors flex items-center gap-1 shadow-sm">
+                                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                                            Mark Mastered
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Empty State Fallback -->
+                    <div id="empty-state" class="hidden flex-col items-center justify-center text-center py-12 px-4 bg-slate-50 rounded-2xl border border-dashed border-slate-200 mt-6">
+                        <svg class="w-12 h-12 text-slate-450 mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <p class="font-bold text-slate-800 text-sm">No flashcards in this filter category.</p>
+                        <p class="text-xs text-slate-400 max-w-xs mx-auto mt-1">Start mastering key concepts on the "To Learn" pile or tap "Reset Study Progress" to restart.</p>
+                    </div>
+
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+    <!-- Script Controllers & Theme Management Engines -->
+    <script>
+        // Progress percentage tracker
+        let masteredCards = [];
+
+        // Real-time Reading Progress Bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            const bar = document.getElementById('progressBar');
+            if(bar) bar.style.width = scrolled + '%';
+            
+            // Highlight Table of Contents actively
+            const sections = ['intro', 'industrial-revolution', 'contributors', 'bhopal-disaster', 'pesticides-impact', 'overexploitation', 'cruelty-to-animals', 'study-center'];
+            let currentActive = 'intro';
+            
+            for (const section of sections) {
+                const element = document.getElementById(section);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top <= 140) {
+                        currentActive = section;
+                    }
+                }
+            }
+            
+            const links = document.querySelectorAll('.toc-link');
+            links.forEach(link => {
+                const href = link.getAttribute('href').substring(1);
+                if (href === currentActive) {
+                    link.classList.remove('text-slate-500', 'font-medium', 'border-transparent');
+                    if (href === 'study-center') {
+                        link.classList.add('text-amber-600', 'font-bold', 'border-amber-500');
+                    } else {
+                        link.classList.add('text-emerald-700', 'font-semibold', 'border-emerald-600');
+                    }
+                } else {
+                    link.classList.remove('text-emerald-700', 'font-semibold', 'border-emerald-600', 'text-amber-600', 'font-bold', 'border-amber-500');
+                    link.classList.add('text-slate-500', 'font-medium', 'border-transparent');
+                }
+            });
+        });
+
+        // Copy current page URL safety function
+        function copyCurrentURL() {
+            const currentURL = window.location.href;
+            const tempInput = document.createElement('input');
+            tempInput.value = currentURL;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            
+            const tooltip = document.getElementById('copy-tooltip');
+            tooltip.classList.remove('scale-0');
+            tooltip.classList.add('scale-100');
+            
+            setTimeout(() => {
+                tooltip.classList.remove('scale-100');
+                tooltip.classList.add('scale-0');
+            }, 2000);
+        }
+
+        // Adjustable Reading Typography Engine
+        function adjustTextSize(size) {
+            const container = document.getElementById('content-container');
+            const btns = ['btn-size-normal', 'btn-size-large', 'btn-size-xlarge'];
+            
+            // Clear current states
+            container.classList.remove('readable-normal', 'readable-large', 'readable-xlarge');
+            btns.forEach(id => {
+                const btn = document.getElementById(id);
+                btn.classList.remove('bg-emerald-50', 'text-emerald-700', 'border-emerald-200');
+                btn.classList.add('bg-slate-50', 'text-slate-600', 'border-slate-200');
+            });
+            
+            // Set newly defined states
+            if (size === 'normal') {
+                container.classList.add('readable-normal');
+                document.getElementById('btn-size-normal').className = "px-2.5 py-1 text-xs font-bold rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 transition-all";
+            } else if (size === 'large') {
+                container.classList.add('readable-large');
+                document.getElementById('btn-size-large').className = "px-2.5 py-1 text-xs font-bold rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 transition-all";
+            } else if (size === 'xlarge') {
+                container.classList.add('readable-xlarge');
+                document.getElementById('btn-size-xlarge').className = "px-2.5 py-1 text-xs font-bold rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 transition-all";
+            }
+        }
+
+        // Dynamic Background Switcher (Restructure UI Theme Settings)
+        function changeBackdrop(theme) {
+            const body = document.getElementById('body-root');
+            const mainCard = document.getElementById('main-article-card');
+            const asideMeta = document.getElementById('aside-card-meta');
+            const asideTheme = document.getElementById('aside-card-theme');
+            const asideToc = document.getElementById('aside-card-toc');
+            const studyCenter = document.getElementById('study-center');
+            
+            // Resource card objects
+            const r1 = document.getElementById('card-resource-1');
+            const r2 = document.getElementById('card-resource-2');
+            const r3 = document.getElementById('card-resource-3');
+            
+            // Theme selection button indicators
+            const themeBtnIds = ['btn-theme-sage', 'btn-theme-terracotta', 'btn-theme-breeze', 'btn-theme-forest'];
+            themeBtnIds.forEach(id => {
+                const button = document.getElementById(id);
+                if (button) button.classList.remove('border-emerald-600', 'border-indigo-600', 'border-amber-600', 'border-white');
+                if (button) button.classList.add('border-transparent');
+            });
+
+            // Remove all current themes from body
+            body.classList.remove('theme-sage', 'theme-terracotta', 'theme-breeze', 'theme-forest');
+            body.classList.add('theme-' + theme);
+
+            // Active button border trigger
+            const activeBtn = document.getElementById('btn-theme-' + theme);
+            if (activeBtn) {
+                activeBtn.classList.remove('border-transparent');
+                if (theme === 'forest') {
+                    activeBtn.classList.add('border-white');
+                } else {
+                    activeBtn.classList.add('border-emerald-600');
+                }
+            }
+
+            // If Deep Forest (Dark Mode) chosen
+            if (theme === 'forest') {
+                body.classList.remove('text-slate-800');
+                body.classList.add('text-slate-200');
+
+                // Adjust central containers to elegant glassmorphic dark mode
+                const darkCardClasses = "bg-slate-900/90 backdrop-blur-md rounded-3xl border border-emerald-900/60 shadow-xl transition-colors duration-500 text-slate-200";
+                const darkAsideClasses = "bg-slate-900/95 backdrop-blur-md rounded-2xl border border-emerald-950 shadow-md transition-colors duration-500 text-slate-300";
+                
+                mainCard.className = darkCardClasses;
+                studyCenter.className = darkCardClasses;
+                asideMeta.className = darkAsideClasses;
+                asideTheme.className = darkAsideClasses;
+                asideToc.className = darkAsideClasses;
+
+                [r1, r2, r3].forEach(el => {
+                    if (el) el.className = "bg-slate-950/80 border border-emerald-900/50 p-5 rounded-2xl transition-all shadow-md text-slate-300 hover:border-emerald-700";
+                });
+
+                document.getElementById('main-title').className = "font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-emerald-100 leading-[1.15] tracking-tight mb-6";
+                document.getElementById('flash-title').className = "font-serif text-2xl sm:text-3xl font-bold text-emerald-100 m-0";
+                document.getElementById('theme-card-title').className = "text-xs font-bold text-emerald-200 uppercase tracking-widest mb-3 flex items-center gap-2";
+                document.getElementById('theme-desc').className = "text-xs text-slate-400 mb-4";
+                document.getElementById('author-label').className = "font-bold text-slate-100 text-sm m-0";
+                document.getElementById('science-tag').className = "inline-flex items-center gap-1.5 font-semibold text-slate-300 bg-slate-800 px-3 py-1 rounded-full text-xs";
+                document.getElementById('meta-year').className = "flex items-center gap-1.5 text-slate-400";
+                document.getElementById('meta-read-time').className = "flex items-center gap-1.5 text-slate-400";
+                document.getElementById('size-label').className = "text-xs font-bold text-slate-400 uppercase tracking-widest";
+                document.getElementById('time-badge').className = "text-emerald-400 font-bold flex items-center gap-1";
+                document.getElementById('footer-logo').className = "font-serif font-bold text-slate-200 text-sm";
+                document.getElementById('editorial-quote').className = "my-12 relative bg-emerald-950/40 rounded-2xl border-l-4 border-emerald-500 p-8 md:p-10 transition-all duration-500 text-slate-300";
+
+            } else {
+                // Return to elegant light styles
+                body.classList.remove('text-slate-200');
+                body.classList.add('text-slate-800');
+
+                const lightCardClasses = "bg-white rounded-3xl p-6 sm:p-10 lg:p-16 border border-slate-200/80 shadow-sm transition-colors duration-500 text-slate-700";
+                const lightAsideClasses = "bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm transition-colors duration-500 text-slate-850";
+
+                mainCard.className = lightCardClasses;
+                studyCenter.className = "bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-md transition-colors duration-500 scroll-mt-20";
+                asideMeta.className = lightAsideClasses;
+                asideTheme.className = lightAsideClasses;
+                asideToc.className = lightAsideClasses;
+
+                [r1, r2, r3].forEach(el => {
+                    if (el) el.className = "bg-slate-50 border border-slate-100 p-5 rounded-2xl transition-all shadow-[0_4px_12px_rgba(0,0,0,0.01)] hover:shadow-md text-slate-650 hover:border-emerald-200";
+                });
+
+                document.getElementById('main-title').className = "font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-[1.15] tracking-tight mb-6";
+                document.getElementById('flash-title').className = "font-serif text-2xl sm:text-3xl font-bold text-slate-900 m-0";
+                document.getElementById('theme-card-title').className = "text-xs font-bold text-slate-800 uppercase tracking-widest mb-3 flex items-center gap-2";
+                document.getElementById('theme-desc').className = "text-xs text-slate-500 mb-4";
+                document.getElementById('author-label').className = "font-bold text-slate-800 text-sm m-0";
+                document.getElementById('science-tag').className = "inline-flex items-center gap-1.5 font-semibold text-slate-700 bg-slate-100 px-3 py-1 rounded-full text-xs";
+                document.getElementById('meta-year').className = "flex items-center gap-1.5 text-slate-500";
+                document.getElementById('meta-read-time').className = "flex items-center gap-1.5 text-slate-500";
+                document.getElementById('size-label').className = "text-xs font-bold text-slate-400 uppercase tracking-widest";
+                document.getElementById('time-badge').className = "text-slate-850 font-bold flex items-center gap-1";
+                document.getElementById('footer-logo').className = "font-serif font-bold text-slate-900 text-sm";
+                document.getElementById('editorial-quote').className = "my-12 relative bg-emerald-50/50 rounded-2xl border-l-4 border-emerald-600 p-8 md:p-10 transition-all duration-500 text-slate-700";
+            }
+        }
+
+        // Toggle Card Front vs Back view
+        function toggleCard(element) {
+            // Find parent .group.perspective-1000 and flip
+            const parent = element.closest('.perspective-1000');
+            if (parent) {
+                parent.classList.toggle('flashcard-flipped');
+            }
+        }
+
+        // Mark a specific flashcard as Mastered
+        function markMastered(event, cardId) {
+            event.stopPropagation(); // Avoid triggering additional parent card flips
+            const cardEl = document.querySelector(`[data-card-id="${cardId}"]`);
+            
+            if (cardEl) {
+                cardEl.setAttribute('data-status', 'mastered');
+                
+                // Keep track of mastered card IDs
+                if (!masteredCards.includes(cardId)) {
+                    masteredCards.push(cardId);
+                }
+                
+                // Slide / flip animation trigger back
+                cardEl.classList.remove('flashcard-flipped');
+                
+                // Beautiful dynamic check mark overlay indicating completeness
+                setTimeout(() => {
+                    const front = cardEl.querySelector('.flashcard-front');
+                    if (front && !front.querySelector('.mastered-banner')) {
+                        const banner = document.createElement('div');
+                        banner.className = "mastered-banner absolute inset-0 bg-emerald-150/90 backdrop-blur-[2px] rounded-2xl flex flex-col items-center justify-center transition-all duration-300 z-10 border-2 border-emerald-500";
+                        banner.innerHTML = `
+                            <svg class="w-12 h-12 text-emerald-650 mb-2 animate-scale" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span class="font-bold text-emerald-950 text-sm tracking-wide">Concept Mastered!</span>
+                            <button onclick="unmarkMastered(event, '${cardId}')" class="mt-3 px-3 py-1 rounded-lg bg-white border border-emerald-400 text-[10px] font-extrabold text-emerald-800 hover:bg-emerald-50 transition-colors uppercase tracking-wider">Review Again</button>
+                        `;
+                        front.appendChild(banner);
+                    }
+                    updateProgressIndicator();
+                }, 400);
+            }
+        }
+
+        // Unmark mastered to review again
+        function unmarkMastered(event, cardId) {
+            event.stopPropagation();
+            const cardEl = document.querySelector(`[data-card-id="${cardId}"]`);
+            if (cardEl) {
+                cardEl.setAttribute('data-status', 'learning');
+                masteredCards = masteredCards.filter(id => id !== cardId);
+                
+                const banner = cardEl.querySelector('.mastered-banner');
+                if (banner) {
+                    banner.remove();
+                }
+                updateProgressIndicator();
+                
+                // Reapply active filters in case user was filtering
+                filterFlashcards(currentFilter);
+            }
+        }
+
+        // Update real-time learning widget counts
+        function updateProgressIndicator() {
+            const total = 8;
+            const completed = masteredCards.length;
+            
+            document.getElementById('mastered-count').innerText = completed;
+            document.getElementById('progress-percentage').innerText = Math.round((completed / total) * 100) + '%';
+            
+            // Adjust CSS Circle stroke dash offset (Circle circumference is ~125.6)
+            const strokeDashOffset = 125.6 - (125.6 * (completed / total));
+            document.getElementById('progress-circle').setAttribute('stroke-dashoffset', strokeDashOffset);
+        }
+
+        let currentFilter = 'all';
+
+        // Filter cards by Learning vs Mastered piles
+        function filterFlashcards(filterType) {
+            currentFilter = filterType;
+            const cards = document.querySelectorAll('.flashcard-element');
+            let matchedCount = 0;
+
+            const btnAll = document.getElementById('btn-filter-all');
+            const btnLearn = document.getElementById('btn-filter-learning');
+            const btnMaster = document.getElementById('btn-filter-mastered');
+
+            // Reset navigation button states
+            [btnAll, btnLearn, btnMaster].forEach(btn => {
+                if(btn) {
+                    btn.className = "px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all";
+                }
+            });
+
+            // Set active category state
+            if (filterType === 'all') {
+                btnAll.className = "px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-emerald-600 text-white transition-all";
+            } else if (filterType === 'learning') {
+                btnLearn.className = "px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-emerald-600 text-white transition-all";
+            } else if (filterType === 'mastered') {
+                btnMaster.className = "px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-emerald-600 text-white transition-all";
+            }
+
+            cards.forEach(card => {
+                const status = card.getAttribute('data-status');
+                if (filterType === 'all') {
+                    card.classList.remove('hidden');
+                    matchedCount++;
+                } else if (filterType === 'learning' && status === 'learning') {
+                    card.classList.remove('hidden');
+                    matchedCount++;
+                } else if (filterType === 'mastered' && status === 'mastered') {
+                    card.classList.remove('hidden');
+                    matchedCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            // Display fallback notice if category empty
+            const fallback = document.getElementById('empty-state');
+            if (matchedCount === 0) {
+                fallback.classList.remove('hidden');
+                fallback.classList.add('flex');
+            } else {
+                fallback.classList.remove('flex');
+                fallback.classList.add('hidden');
+            }
+        }
+
+        // Reset all flashcards back to initial study status
+        function resetAllFlashcards() {
+            masteredCards = [];
+            const cards = document.querySelectorAll('.flashcard-element');
+            
+            cards.forEach(card => {
+                card.setAttribute('data-status', 'learning');
+                card.classList.remove('flashcard-flipped');
+                const banner = card.querySelector('.mastered-banner');
+                if (banner) banner.remove();
+            });
+
+            updateProgressIndicator();
+            filterFlashcards('all');
+        }
+    </script>
+</body>
+</html>

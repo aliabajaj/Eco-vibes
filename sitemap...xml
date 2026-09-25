@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://sitemaps.org">
+    <!-- Main Dashboard / Homepage -->
+    <url>
+        <loc>https://github.io</loc>
+        <lastmod>2026-09-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.00</priority>
+    </url>
+
+    <!-- Save the Aravallis Article -->
+    <url>
+        <loc>https://github.ioaravalli.html</loc>
+        <lastmod>2026-09-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+
+    <!-- Nature, Technology, & Deception Essay -->
+    <url>
+        <loc>https://github.ioenvironmental-philosophy.html</loc>
+        <lastmod>2026-09-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+</urlset>

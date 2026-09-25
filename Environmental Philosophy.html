@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature, Technology, & Deception — Environmental Essays by Alia B.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        paper: {
+                            50: '#FCFCFA',
+                            100: '#FAF8F5',
+                            200: '#F3EFEA',
+                            300: '#E6E1D8',
+                        },
+                        forest: {
+                            50: '#f2f9f5',
+                            100: '#e1f2e6',
+                            600: '#2d6a4f',
+                            800: '#1b4332',
+                            900: '#081c15',
+                        },
+                        accent: {
+                            copper: '#c86d51',
+                            sage: '#52796f',
+                            gold: '#d4a373',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['Merriweather', 'Georgia', 'serif'],
+                        display: ['Cinzel', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .reading-progress-bar {
+            width: 0%;
+            transition: width 0.1s ease-out;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF8F5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d4a373;
+            border-radius: 4px;
+        }
+        .prose-custom p {
+            margin-bottom: 1.5rem;
+            line-height: 1.85;
+        }
+    </style>
+</head>
+<body class="bg-paper-100 text-gray-800 font-serif antialiased selection:bg-forest-100 selection:text-forest-900 transition-colors duration-300">
+
+    <!-- Reading Progress Bar -->
+    <div class="fixed top-0 left-0 w-full h-1 bg-paper-300 z-50">
+        <div id="progress-bar" class="h-full bg-forest-600 reading-progress-bar"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-40 bg-paper-100/90 backdrop-blur-md border-b border-paper-300 transition-all duration-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="w-8 h-8 rounded-full bg-forest-800 text-paper-50 flex items-center justify-center font-display font-bold text-sm shadow-sm">
+                    AB
+                </span>
+                <div class="hidden sm:block">
+                    <span class="font-display font-bold text-gray-900 tracking-wider text-sm block leading-tight">ENVIRONMENTAL ESSAYS</span>
+                    <span class="text-xs font-sans text-forest-600">By Alia B.</span>
+                </div>
+            </div>
+
+            <!-- Chapter Navigation Quick Links -->
+            <div class="hidden md:flex items-center space-x-6 text-sm font-sans font-medium text-gray-600">
+                <a href="#chapter-1" class="hover:text-forest-800 transition-colors">Ch 1: Practical Worth</a>
+                <a href="#chapter-2" class="hover:text-forest-800 transition-colors">Ch 2: Environmental AI</a>
+                <a href="#chapter-3" class="hover:text-forest-800 transition-colors">Ch 3: Greenwashing</a>
+                <a href="#word-bank" class="text-accent-copper hover:underline font-semibold flex items-center gap-1">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    Glossary
+                </a>
+            </div>
+
+            <!-- Font Size & Reader Controls -->
+            <div class="flex items-center space-x-2 font-sans">
+                <button id="btn-font-decrease" title="Decrease Font Size" class="p-2 rounded-md hover:bg-paper-200 text-gray-600 text-xs font-bold border border-paper-300">A-</button>
+                <button id="btn-font-reset" title="Reset Font Size" class="p-2 rounded-md hover:bg-paper-200 text-gray-600 text-xs font-semibold border border-paper-300">100%</button>
+                <button id="btn-font-increase" title="Increase Font Size" class="p-2 rounded-md hover:bg-paper-200 text-gray-600 text-sm font-bold border border-paper-300">A+</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Editorial Hero Header -->
+    <header class="pt-16 pb-12 md:pt-24 md:pb-16 bg-paper-50 border-b border-paper-300">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-50 border border-forest-100 text-forest-800 text-xs font-sans font-semibold uppercase tracking-widest mb-6">
+                <span class="w-2 h-2 rounded-full bg-forest-600 animate-pulse"></span>
+                A Three-Part Environmental Philosophy Series
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-display font-bold text-forest-900 leading-tight mb-6">
+                Nature, Technology,<br class="hidden sm:inline">& Deception
+            </h1>
+
+            <p class="font-serif italic text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
+                Re-examining intrinsic natural worth, the hidden ecological footprints of artificial intelligence, and corporate environmental illusions.
+            </p>
+
+            <!-- Metadata Banner -->
+            <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 font-sans text-sm text-gray-600 pt-6 border-t border-paper-200 max-w-2xl mx-auto">
+                <div class="flex items-center gap-2 text-left">
+                    <div class="w-10 h-10 rounded-full bg-forest-800 text-paper-50 font-bold flex items-center justify-center text-xs shadow">AB</div>
+                    <div>
+                        <p class="text-xs uppercase text-gray-400 font-semibold tracking-wider">Author</p>
+                        <p class="font-bold text-gray-900">Alia B.</p>
+                    </div>
+                </div>
+
+                <div class="h-8 w-px bg-paper-300 hidden sm:block"></div>
+
+                <div class="text-left">
+                    <p class="text-xs uppercase text-gray-400 font-semibold tracking-wider">Published</p>
+                    <p class="font-medium text-gray-900">September 25, 2026</p>
+                </div>
+
+                <div class="h-8 w-px bg-paper-300 hidden sm:block"></div>
+
+                <div class="text-left">
+                    <p class="text-xs uppercase text-gray-400 font-semibold tracking-wider">Estimated Read</p>
+                    <p class="font-semibold text-forest-600 flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        15 min read
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Main Content Container with Layout Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+            <!-- Sticky Sidebar Navigation -->
+            <aside class="hidden lg:block lg:col-span-3">
+                <div class="sticky top-24 space-y-6 font-sans">
+                    <div class="p-5 bg-white rounded-xl border border-paper-300 shadow-sm">
+                        <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-4">Table of Contents</h3>
+                        <nav class="space-y-3 text-sm">
+                            <a href="#chapter-1" class="block text-gray-700 hover:text-forest-800 font-medium transition-colors border-l-2 border-transparent hover:border-forest-600 pl-3 py-1">
+                                Chapter 1: Worth Beyond Practical Use
+                            </a>
+                            <a href="#chapter-2" class="block text-gray-700 hover:text-forest-800 font-medium transition-colors border-l-2 border-transparent hover:border-forest-600 pl-3 py-1">
+                                Chapter 2: Environmental Cost of AI
+                            </a>
+                            <a href="#chapter-3" class="block text-gray-700 hover:text-forest-800 font-medium transition-colors border-l-2 border-transparent hover:border-forest-600 pl-3 py-1">
+                                Chapter 3: Psychology of Greenwashing
+                            </a>
+                            <a href="#word-bank" class="block text-accent-copper hover:text-accent-copper/80 font-semibold border-l-2 border-transparent pl-3 py-1 mt-4">
+                                Interactive Word Bank & Glossary
+                            </a>
+                        </nav>
+                    </div>
+
+                    <!-- Quick Facts Card -->
+                    <div class="p-5 bg-forest-900 text-paper-50 rounded-xl shadow-sm space-y-3">
+                        <span class="text-xs font-bold uppercase tracking-widest text-accent-gold block">Publication Note</span>
+                        <p class="text-xs leading-relaxed text-gray-300">
+                            This series critically challenges anthropogenic evaluation of species, technological costs, and corporate sustainability tactics.
+                        </p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Reading Body -->
+            <main id="reader-body" class="lg:col-span-9 max-w-3xl mx-auto lg:mx-0 font-serif text-gray-800 text-base sm:text-lg leading-relaxed space-y-16">
+
+                <!-- ================= CHAPTER 1 ================= -->
+                <article id="chapter-1" class="scroll-mt-24 border-b border-paper-300 pb-16">
+                    <header class="mb-8">
+                        <span class="text-xs font-sans font-bold uppercase tracking-widest text-forest-600 block mb-2">Part I</span>
+                        <h2 class="text-3xl sm:text-4xl font-display font-bold text-forest-900 leading-snug">
+                            Chapter 1 — The Worth Beyond Practical Use
+                        </h2>
+                    </header>
+
+                    <div class="prose-custom">
+                        <p class="first-letter:text-5xl first-letter:font-display first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:text-forest-800">
+                            There are many things included in nature which contribute to the environment. They have a special place and are of different importance. The significance of these organisms of nature should not be valued or defined by their use in human society. Even though they don’t play a significant role or any role in our lives it doesn’t make that particular biosphere insignificant to other beings or the world itself. We see the significance of every being on how they affect our lives or human lives — but that is wrong. Each biosphere holds its own importance that should not be valued because of how they affect our lives.
+                        </p>
+
+                        <!-- Example 1 Spotlight Box -->
+                        <div class="my-10 p-6 bg-white rounded-2xl border border-paper-300 shadow-sm font-sans space-y-6">
+                            <div class="flex items-center gap-3 border-b border-paper-200 pb-4">
+                                <span class="px-3 py-1 bg-forest-100 text-forest-800 rounded-full text-xs font-bold uppercase">Case Study #1</span>
+                                <h3 class="text-xl font-bold text-gray-900 font-display">Parasites & Ectoparasites</h3>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="bg-paper-50 p-4 rounded-xl border border-paper-200">
+                                    <h4 class="font-bold text-forest-800 text-sm uppercase mb-2 flex items-center gap-1.5">
+                                        <svg class="w-4 h-4 text-forest-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                        Bioindicators of Ecosystem Health
+                                    </h4>
+                                    <p class="text-sm text-gray-700 leading-relaxed">
+                                        Parasites are sensitive bioindicators surviving only in specific, healthy conditions. Population surges or crashes provide scientists critical insights into soil, air, and water purity, widely utilized in rural farms to detect hygiene deficiencies.
+                                    </p>
+                                </div>
+
+                                <div class="bg-paper-50 p-4 rounded-xl border border-paper-200">
+                                    <h4 class="font-bold text-forest-800 text-sm uppercase mb-2 flex items-center gap-1.5">
+                                        <svg class="w-4 h-4 text-forest-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                        Food Web Interdependence
+                                    </h4>
+                                    <p class="text-sm text-gray-700 leading-relaxed">
+                                        Ectoparasites feed birds and insects. For instance, the oxpecker bird feeds on parasites from zebras and giraffes, cleaning their skin while simultaneously vocalizing warning alerts when predators approach.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Key Parasites List Grid -->
+                            <div class="pt-2">
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3">Key Species Diversity (~300,000 Species Total)</h4>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs">
+                                    <div class="p-2.5 bg-paper-100 rounded-lg border border-paper-200"><strong>Lice:</strong> Head, body, pubic lice living off blood.</div>
+                                    <div class="p-2.5 bg-paper-100 rounded-lg border border-paper-200"><strong>Ticks:</strong> Transmit Lyme disease & Rocky Mountain fever.</div>
+                                    <div class="p-2.5 bg-paper-100 rounded-lg border border-paper-200"><strong>Mites:</strong> <i>Sarcoptes scabiei</i> causing scabies.</div>
+                                    <div class="p-2.5 bg-paper-100 rounded-lg border border-paper-200"><strong>Fleas:</strong> Blood-feeding insects transmitting plague.</div>
+                                    <div class="p-2.5 bg-paper-100 rounded-lg border border-paper-200"><strong>Bedbugs:</strong> Small wingless blood-feeding insects.</div>
+                                    <div class="p-2.5 bg-paper-100 rounded-lg border border-paper-200"><strong>Parasitic Flies:</strong> Screwworms burrowing into tissues.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Key Academic Figures Card -->
+                        <div class="my-8 p-6 bg-forest-50 border border-forest-100 rounded-2xl font-sans space-y-4">
+                            <h4 class="text-xs font-bold uppercase tracking-widest text-forest-800">Key Academic Contributors</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="bg-white p-4 rounded-xl border border-forest-100 shadow-sm">
+                                    <h5 class="font-bold text-gray-900 text-sm">Chelsea Wood</h5>
+                                    <p class="text-xs text-forest-600 font-semibold mb-2">Ecologist, University of Washington</p>
+                                    <p class="text-xs text-gray-600 leading-relaxed mb-3">
+                                        Analyzes how environmental shifts impact parasites and underscores their fundamental necessity within complex food webs.
+                                    </p>
+                                    <a href="https://youtu.be/uBqIZa3eCwM" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-forest-800 font-bold hover:underline">
+                                        <span>Watch Chelsea Wood Talk</span>
+                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                    </a>
+                                </div>
+                                <div class="bg-white p-4 rounded-xl border border-forest-100 shadow-sm">
+                                    <h5 class="font-bold text-gray-900 text-sm">Robert M. May</h5>
+                                    <p class="text-xs text-forest-600 font-semibold mb-2">Pioneering Ecologist (1936 – 2020)</p>
+                                    <p class="text-xs text-gray-600 leading-relaxed">
+                                        Pioneered groundbreaking empirical evidence demonstrating that ectoparasites are critical maintaining ecological community dynamics.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Example 2 Spotlight Box -->
+                        <div class="my-10 p-6 bg-white rounded-2xl border border-paper-300 shadow-sm font-sans space-y-6">
+                            <div class="flex items-center gap-3 border-b border-paper-200 pb-4">
+                                <span class="px-3 py-1 bg-accent-copper/10 text-accent-copper rounded-full text-xs font-bold uppercase">Case Study #2</span>
+                                <h3 class="text-xl font-bold text-gray-900 font-display">Gympie-Gympie (Dendrocnide moroides)</h3>
+                            </div>
+
+                            <p class="text-sm text-gray-700 leading-relaxed">
+                                Discovered by British explorer Allan Cunningham in 1819 near the Endeavour River in Australia, the Gympie-Gympie is notorious for trichomes that inject potent neurotoxin <i>gympietides</i>. The resulting sensation is described as being burned by hot acid while simultaneously electrocuted.
+                            </p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+                                <div class="p-4 bg-paper-50 rounded-xl border border-paper-200">
+                                    <span class="font-bold text-gray-900 block mb-1">Gap Filler Role</span>
+                                    Grows rapidly when giant canopy trees fall, holding exposed soil against severe erosion and habitat fragmentation.
+                                </div>
+                                <div class="p-4 bg-paper-50 rounded-xl border border-paper-200">
+                                    <span class="font-bold text-gray-900 block mb-1">Vital Food Source</span>
+                                    Provides essential fruits for adapted rainforest wildlife such as the green-eyed tree frog.
+                                </div>
+                                <div class="p-4 bg-paper-50 rounded-xl border border-paper-200">
+                                    <span class="font-bold text-gray-900 block mb-1">Natural "No-Go Zone"</span>
+                                    Acts as a natural defense barrier, preventing humans and livestock from trampling fragile underthought flora.
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>
+                            These examples illustrate that an organism's worth should never be judged by its direct human utility. Biased labels like "useless" or "worthless" ignore ecological reality. As Lord Mahavira implied through the doctrine of <i>Anekantavada</i>, truth possesses multiple perspectives and cannot be viewed through a single anthropocentric lens.
+                        </p>
+
+                        <!-- Anthrocentrism vs Ecocentrism Deep Dive -->
+                        <div class="my-10 p-6 bg-paper-200 rounded-2xl border border-paper-300 font-sans space-y-4">
+                            <h4 class="text-base font-bold text-gray-900 font-display">Philosophical Paradigms: Anthropocentrism vs. Ecocentrism</h4>
+                            <div class="space-y-3 text-xs sm:text-sm text-gray-700 leading-relaxed">
+                                <p>
+                                    <strong class="text-forest-900">Anthropocentrism:</strong> The false belief that humans sit at the center of existence, reducing all other life forms to purely <i>instrumental value</i>. Tracing back to ancient Greek philosophical assumptions, this mindset directly fuels deforestation, climate breakdown, and biodiversity decline.
+                                </p>
+                                <p>
+                                    <strong class="text-forest-900">Ecocentrism:</strong> Promoted by key thinkers such as <strong>Aldo Leopold</strong> (father of wildlife conservation and author of <i>A Sand County Almanac</i>), <strong>Arne Naess</strong> (founder of Deep Ecology), and <strong>George Sessions</strong>. Ecocentrism recognizes the intrinsic value of both organic species and inorganic ecological structures like rivers and soils.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Chapter 1 Quote Card -->
+                        <blockquote class="my-10 p-8 bg-forest-900 text-paper-50 rounded-2xl shadow-md text-center font-serif italic relative">
+                            <span class="text-6xl text-forest-600 font-display absolute top-2 left-4 opacity-30">“</span>
+                            <p class="text-lg sm:text-xl leading-relaxed relative z-10 mb-4">
+                                “Such organisms are like people working in the backstage of a show, not given much credit but are vital for the success of the show.”
+                            </p>
+                            <footer class="font-sans text-xs uppercase tracking-widest text-accent-gold font-bold not-italic">
+                                — Alia B.
+                            </footer>
+                        </blockquote>
+                    </div>
+                </article>
+
+                <!-- ================= CHAPTER 2 ================= -->
+                <article id="chapter-2" class="scroll-mt-24 border-b border-paper-300 pb-16">
+                    <header class="mb-8">
+                        <span class="text-xs font-sans font-bold uppercase tracking-widest text-forest-600 block mb-2">Part II</span>
+                        <h2 class="text-3xl sm:text-4xl font-display font-bold text-forest-900 leading-snug">
+                            Chapter 2 — The Ghost in the Machine: Environmental Cost of AI
+                        </h2>
+                    </header>
+
+                    <div class="prose-custom">
+                        <p class="first-letter:text-5xl first-letter:font-display first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:text-forest-800">
+                            Artificial Intelligence has impacted and changed our lives in several ways, both good and bad. AI appears to be a clean machine with answers to all of our questions, but no good thing comes alone — everything has a price and so does AI. The price comes in two key domains: psychological dependence and direct environmental degradation.
+                        </p>
+
+                        <!-- Environmental Costs Data Grid -->
+                        <div class="my-10 grid grid-cols-1 sm:grid-cols-2 gap-6 font-sans">
+                            
+                            <div class="p-5 bg-white rounded-xl border border-paper-300 shadow-sm space-y-2">
+                                <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-sm">1</div>
+                                <h4 class="font-bold text-gray-900 text-base">High Energy Demand</h4>
+                                <p class="text-xs text-gray-600 leading-relaxed">
+                                    Generating a single AI image can consume as much electricity as fully charging a modern smartphone. Scaled globally across billions of prompts, this fuels massive fossil fuel extraction, accelerated mining, and severe soil erosion.
+                                </p>
+                            </div>
+
+                            <div class="p-5 bg-white rounded-xl border border-paper-300 shadow-sm space-y-2">
+                                <div class="w-8 h-8 rounded-lg bg-red-100 text-red-800 flex items-center justify-center font-bold text-sm">2</div>
+                                <h4 class="font-bold text-gray-900 text-base">Carbon Footprint Escalation</h4>
+                                <p class="text-xs text-gray-600 leading-relaxed">
+                                    Digital activity is rapidly accelerating carbon dioxide and methane emissions. AI compute infrastructure has become one of the top anthropogenic drivers of climate instability and weather disruption.
+                                </p>
+                            </div>
+
+                            <div class="p-5 bg-white rounded-xl border border-paper-300 shadow-sm space-y-2">
+                                <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center font-bold text-sm">3</div>
+                                <h4 class="font-bold text-gray-900 text-base">Critical Water Depletion</h4>
+                                <p class="text-xs text-gray-600 leading-relaxed">
+                                    Data center liquid cooling consumes vast freshwater resources: <strong>500ml</strong> per simple query prompt, <strong>0.5L</strong> per image generated, and <strong>1 gallon (3.78L)</strong> per 5-second video render.
+                                </p>
+                            </div>
+
+                            <div class="p-5 bg-white rounded-xl border border-paper-300 shadow-sm space-y-2">
+                                <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-sm">4</div>
+                                <h4 class="font-bold text-gray-900 text-base">Electronic Waste (E-Waste)</h4>
+                                <p class="text-xs text-gray-600 leading-relaxed">
+                                    Rapid hardware hardware burnout under continuous high load prompts frequent premature disposal of functional compute components, compounding toxic e-waste.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- Pragmatic Solutions Section -->
+                        <div class="my-10 p-6 bg-forest-900 text-paper-50 rounded-2xl font-sans space-y-4">
+                            <h4 class="text-base font-bold text-accent-gold font-display uppercase tracking-wider">Sustainable Solutions & Engineering Mitigations</h4>
+                            <ul class="space-y-3 text-xs sm:text-sm text-gray-200 leading-relaxed">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-accent-gold font-bold">•</span>
+                                    <span><strong>Carbon Liquefaction:</strong> Capturing and compressing CO₂ gas into liquid state for aviation fuel synthesis and eco-building materials.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-accent-gold font-bold">•</span>
+                                    <span><strong>R-170 (Ethane) Gas Cooling:</strong> Replacing freshwater cooling systems with eco-friendly R-170 gas, featuring zero ozone depletion impact.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-accent-gold font-bold">•</span>
+                                    <span><strong>On-Site Renewable Microgrids:</strong> Direct integration of dedicated solar arrays and wind turbines surrounding data center facilities.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Chapter 2 Quote Card -->
+                        <blockquote class="my-10 p-8 bg-paper-50 border border-paper-300 rounded-2xl text-center font-serif italic shadow-sm">
+                            <p class="text-lg sm:text-xl text-gray-900 mb-4">
+                                “AI is like a double-edged sword, it appears to be pretty useful but has several hidden disadvantages.”
+                            </p>
+                            <footer class="font-sans text-xs uppercase tracking-widest text-forest-800 font-bold not-italic">
+                                — Alia B.
+                            </footer>
+                        </blockquote>
+                    </div>
+                </article>
+
+                <!-- ================= CHAPTER 3 ================= -->
+                <article id="chapter-3" class="scroll-mt-24 border-b border-paper-300 pb-16">
+                    <header class="mb-8">
+                        <span class="text-xs font-sans font-bold uppercase tracking-widest text-forest-600 block mb-2">Part III</span>
+                        <h2 class="text-3xl sm:text-4xl font-display font-bold text-forest-900 leading-snug">
+                            Chapter 3 — The Psychology of Green-Washing
+                        </h2>
+                    </header>
+
+                    <div class="prose-custom">
+                        <p class="first-letter:text-5xl first-letter:font-display first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:text-forest-800">
+                            Greenwashing is a deceptive marketing tactic where corporations make exaggerated or completely unverified claims regarding the environmental sustainability of their products to exploit eco-conscious consumer demand without incurring real operational costs.
+                        </p>
+
+                        <!-- Real Life Example: Coca-Cola Breakdown -->
+                        <div class="my-10 p-6 bg-red-50 border-l-4 border-red-600 rounded-r-2xl font-sans space-y-4">
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-lg font-bold text-red-900 font-display">Corporate Case Study: The Coca-Cola Company</h3>
+                                <span class="px-2.5 py-1 bg-red-200 text-red-900 text-xs font-bold rounded-full">Top Plastic Polluter</span>
+                            </div>
+                            
+                            <p class="text-xs text-red-800 leading-relaxed">
+                                Ranked as the world's leading plastic polluter for 6 consecutive years, logging over <strong>33,820 plastic waste items in 2023 alone</strong> alongside peers like PepsiCo and Nestlé.
+                            </p>
+
+                            <div class="space-y-3 text-xs text-red-950 pt-2">
+                                <div class="bg-white/80 p-3 rounded-lg border border-red-200">
+                                    <strong class="text-red-900 block mb-1">1. Abandoned Targets:</strong>
+                                    Pledged in 2022 to reach 25% reusable packaging by 2030, only to quietly retract the goal in late 2024 in favor of recycled plastic reliance.
+                                </div>
+                                <div class="bg-white/80 p-3 rounded-lg border border-red-200">
+                                    <strong class="text-red-900 block mb-1">2. Misleading "100% Recycled" Marketing:</strong>
+                                    European consumer watchdogs noted caps and labels are non-recycled, while plastic recycling itself sheds toxic microplastics into ecosystems.
+                                </div>
+                                <div class="bg-white/80 p-3 rounded-lg border border-red-200">
+                                    <strong class="text-red-900 block mb-1">3. Shifting Consumer Responsibility:</strong>
+                                    Deflecting structural single-use plastic production blame onto individual consumer littering habits.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Greenwashing Tactics Grid -->
+                        <h3 class="text-2xl font-display font-bold text-forest-900 mt-10 mb-6">Common & Advanced Greenwashing Tactics</h3>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-sans text-xs">
+                            <div class="p-4 bg-white rounded-xl border border-paper-300">
+                                <strong class="text-gray-900 text-sm block mb-1">Persuasive Vague Terms</strong>
+                                Unsubstantiated use of buzzwords like "eco-friendly", "pure", or "sustainable".
+                            </div>
+                            <div class="p-4 bg-white rounded-xl border border-paper-300">
+                                <strong class="text-gray-900 text-sm block mb-1">Minor Feature Focus</strong>
+                                Highlighting small recycled elements while ignoring harmful dyes that cause 20% of global freshwater pollution.
+                            </div>
+                            <div class="p-4 bg-white rounded-xl border border-paper-300">
+                                <strong class="text-gray-900 text-sm block mb-1">Irrelevant Claims</strong>
+                                Boasting compliance with mandatory laws (e.g., claiming "CFC-Free" despite global international CFC bans).
+                            </div>
+                            <div class="p-4 bg-white rounded-xl border border-paper-300">
+                                <strong class="text-gray-900 text-sm block mb-1">Greenhushing & Greencrowding</strong>
+                                Hiding real environmental data or blending into industry coalitions to evade oversight.
+                            </div>
+                        </div>
+
+                        <!-- Chapter 3 Quote Card -->
+                        <blockquote class="my-10 p-8 bg-forest-900 text-paper-50 rounded-2xl text-center font-serif italic shadow-md">
+                            <p class="text-lg sm:text-xl leading-relaxed mb-4">
+                                “Greenwashing is pulling wool over someone’s eyes, except here false tactics is pulled over someone’s eyes.”
+                            </p>
+                            <footer class="font-sans text-xs uppercase tracking-widest text-accent-gold font-bold not-italic">
+                                — Alia B.
+                            </footer>
+                        </blockquote>
+                    </div>
+                </article>
+
+                <!-- ================= INTERACTIVE WORD BANK ================= -->
+                <section id="word-bank" class="scroll-mt-24 bg-white p-8 rounded-2xl border border-paper-300 shadow-sm font-sans space-y-6">
+                    <div class="flex flex-wrap items-center justify-between gap-4 border-b border-paper-200 pb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold font-display text-forest-900">Master Essay Word Bank & Glossary</h3>
+                            <p class="text-xs text-gray-500">Essential key terms defined across Chapters 1, 2, and 3</p>
+                        </div>
+                        
+                        <!-- Glossary Search Input -->
+                        <input id="glossary-search" type="text" placeholder="Search key term..." class="px-4 py-2 bg-paper-100 border border-paper-300 rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-forest-600 w-full sm:w-48">
+                    </div>
+
+                    <!-- Filter Tags -->
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <button class="glossary-filter-btn px-3 py-1.5 rounded-full bg-forest-800 text-white font-semibold" data-filter="all">All Terms</button>
+                        <button class="glossary-filter-btn px-3 py-1.5 rounded-full bg-paper-200 text-gray-700 hover:bg-paper-300" data-filter="ch1">Chapter 1</button>
+                        <button class="glossary-filter-btn px-3 py-1.5 rounded-full bg-paper-200 text-gray-700 hover:bg-paper-300" data-filter="ch2">Chapter 2</button>
+                        <button class="glossary-filter-btn px-3 py-1.5 rounded-full bg-paper-200 text-gray-700 hover:bg-paper-300" data-filter="ch3">Chapter 3</button>
+                    </div>
+
+                    <!-- Glossary Items List -->
+                    <div id="glossary-list" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        
+                        <!-- Ch 1 Terms -->
+                        <div class="glossary-card ch1 p-4 bg-paper-50 rounded-xl border border-paper-200 space-y-1">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-forest-800 text-sm">Biota</span>
+                                <span class="text-[10px] uppercase font-semibold px-2 py-0.5 bg-forest-100 text-forest-800 rounded">Ch. 1</span>
+                            </div>
+                            <p class="text-xs text-gray-600">The total animal and plant life belonging to a particular geographic region.</p>
+                        </div>
+
+                        <div class="glossary-card ch1 p-4 bg-paper-50 rounded-xl border border-paper-200 space-y-1">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-forest-800 text-sm">Habitat Fragmentation</span>
+                                <span class="text-[10px] uppercase font-semibold px-2 py-0.5 bg-forest-100 text-forest-800 rounded">Ch. 1</span>
+                            </div>
+                            <p class="text-xs text-gray-600">Division of continuous large habitats into small isolated patches due to anthropogenic land use.</p>
+                        </div>
+
+                        <div class="glossary-card ch1 p-4 bg-paper-50 rounded-xl border border-paper-200 space-y-1">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-forest-800 text-sm">Human Exceptionalism</span>
+                                <span class="text-[10px] uppercase font-semibold px-2 py-0.5 bg-forest-100 text-forest-800 rounded">Ch. 1</span>
+                            </div>
+                            <p class="text-xs text-gray-600">The belief that human beings possess inherent higher moral value than all non-human life forms.</p>
+                        </div>
+
+                        <div class="glossary-card ch1 p-4 bg-paper-50 rounded-xl border border-paper-200 space-y-1">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-forest-800 text-sm">Instrumental Value</span>
+                                <span class="text-[10px] uppercase font-semibold px-2 py-0.5 bg-forest-100 text-forest-800 rounded">Ch. 1</span>
+                            </div>
+                            <p class="text-xs text-gray-600">The philosophical premise that species exist solely to serve human utility with no independent worth.</p>
+                        </div>
+
+                        <!-- Ch 2 Terms -->
+                        <div class="glossary-card ch2 p-4 bg-paper-50 rounded-xl border border-paper-200 space-y-1">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-forest-800 text-sm">Anthropogenic</span>
+                                <span class="text-[10px] uppercase font-semibold px-2 py-0.5 bg-forest-100 text-forest-800 rounded">Ch. 2 / 3</span>
+                            </div>
+                            <p class="text-xs text-gray-600">Environmental alterations and ecological impacts originating from human inventions or actions.</p>
+                        </div>
+
+                        <div class="glossary-card ch2 p-4 bg-paper-50 rounded-xl border border-paper-200 space-y-1">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-forest-800 text-sm">Ecological Integrity</span>
+                                <span class="text-[10px] uppercase font-semibold px-2 py-0.5 bg-forest-100 text-forest-800 rounded">Ch. 2</span>
+                            </div>
+                            <p class="text-xs text-gray-600">The inherent capability of an ecosystem to maintain biodiversity, structure, and balance over time.</p>
+                        </div>
+
+                        <div class="glossary-card ch2 p-4 bg-paper-50 rounded-xl border border-paper-200 space-y-1">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-forest-800 text-sm">Dilapidated</span>
+                            </div>
+                            <p class="text-xs text-gray-600">State of extreme disrepair, decay, or ruin commonly seen in discarded e-waste.</p>
+                        </div>
+
+                        <div class="glossary-card ch2 p-4 bg-paper-50 rounded-xl border border-paper-200 space-y-1">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-forest-800 text-sm">Augment / Amplify</span>
+                                <span class="text-[10px] uppercase font-semibold px-2 py-0.5 bg-forest-100 text-forest-800 rounded">Ch. 2</span>
+                            </div>
+                            <p class="text-xs text-gray-600">To enlarge, magnify, or systematically increase physical magnitude or environmental impact.</p>
+                        </div>
+
+                        <!-- Ch 3 Terms -->
+                        <div class="glossary-card ch3 p-4 bg-paper-50 rounded-xl border border-paper-200 space-y-1">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-forest-800 text-sm">Prodigious</span>
+                                <span class="text-[10px] uppercase font-semibold px-2 py-0.5 bg-forest-100 text-forest-800 rounded">Ch. 3</span>
+                            </div>
+                            <p class="text-xs text-gray-600">Extremely immense, extraordinary, or surprisingly large in quantity or volume.</p>
+                        </div>
+
+                        <div class="glossary-card ch3 p-4 bg-paper-50 rounded-xl border border-paper-200 space-y-1">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-forest-800 text-sm">Embodies</span>
+                                <span class="text-[10px] uppercase font-semibold px-2 py-0.5 bg-forest-100 text-forest-800 rounded">Ch. 3</span>
+                            </div>
+                            <p class="text-xs text-gray-600">Includes, incorporates, or gives tangible physical expression to an idea or substance.</p>
+                        </div>
+
+                        <div class="glossary-card ch3 p-4 bg-paper-50 rounded-xl border border-paper-200 space-y-1">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-forest-800 text-sm">Impairs</span>
+                                <span class="text-[10px] uppercase font-semibold px-2 py-0.5 bg-forest-100 text-forest-800 rounded">Ch. 3</span>
+                            </div>
+                            <p class="text-xs text-gray-600">To weaken, damage, or reduce the functional capacity or structural integrity of something.</p>
+                        </div>
+
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Editorial Footer -->
+    <footer class="bg-forest-900 text-paper-50 border-t border-forest-800 py-12 mt-20 font-sans">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <p class="font-display font-bold text-lg tracking-wider text-accent-gold">NATURE, TECHNOLOGY, & DECEPTION</p>
+            <p class="text-xs text-gray-400">Written & Authored by <strong class="text-white">Alia B.</strong> — Published September 25, 2026</p>
+            <div class="pt-4 border-t border-forest-800 text-[11px] text-gray-500">
+                Designed for optimal reading legibility across mobile, tablet, and desktop viewports.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. Scroll Progress Bar
+            const progressBar = document.getElementById('progress-bar');
+            window.addEventListener('scroll', () => {
+                const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = (window.scrollY / totalHeight) * 100;
+                progressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+            });
+
+            // 2. Font Size Controls
+            const readerBody = document.getElementById('reader-body');
+            let currentSize = 100; // percent
+
+            document.getElementById('btn-font-increase').addEventListener('click', () => {
+                if (currentSize < 130) {
+                    currentSize += 10;
+                    readerBody.style.fontSize = `${currentSize}%`;
+                }
+            });
+
+            document.getElementById('btn-font-decrease').addEventListener('click', () => {
+                if (currentSize > 80) {
+                    currentSize -= 10;
+                    readerBody.style.fontSize = `${currentSize}%`;
+                }
+            });
+
+            document.getElementById('btn-font-reset').addEventListener('click', () => {
+                currentSize = 100;
+                readerBody.style.fontSize = '100%';
+            });
+
+            // 3. Word Bank Filter & Search
+            const filterBtns = document.querySelectorAll('.glossary-filter-btn');
+            const glossaryCards = document.querySelectorAll('.glossary-card');
+            const searchInput = document.getElementById('glossary-search');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('bg-forest-800', 'text-white');
+                        b.classList.add('bg-paper-200', 'text-gray-700');
+                    });
+                    btn.classList.add('bg-forest-800', 'text-white');
+                    btn.classList.remove('bg-paper-200', 'text-gray-700');
+
+                    const filter = btn.dataset.filter;
+                    applyFilters(filter, searchInput.value.toLowerCase());
+                });
+            });
+
+            searchInput.addEventListener('input', (e) => {
+                const activeBtn = document.querySelector('.glossary-filter-btn.bg-forest-800');
+                const filter = activeBtn ? activeBtn.dataset.filter : 'all';
+                applyFilters(filter, e.target.value.toLowerCase());
+            });
+
+            function applyFilters(filterCategory, query) {
+                glossaryCards.forEach(card => {
+                    const matchesCat = (filterCategory === 'all') || card.classList.contains(filterCategory);
+                    const matchesQuery = card.textContent.toLowerCase().includes(query);
+
+                    if (matchesCat && matchesQuery) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>
